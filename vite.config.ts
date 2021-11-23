@@ -8,8 +8,7 @@ function resolve(relativePath: string) {
   return path.resolve(__dirname, relativePath);
 }
 
-const base =
-  process.env.NODE_ENV === 'production' ? '/vite-react-start-template/' : '';
+const base = process.env.NODE_ENV === 'production' ? '/' : '/';
 
 // https://vitejs.dev/config/
 export default defineConfig({
