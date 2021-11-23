@@ -30,7 +30,7 @@ export default defineConfig({
       less: {
         javascriptEnabled: true,
       },
-      scss: {
+      sass: {
         javascriptEnabled: true,
       },
     },

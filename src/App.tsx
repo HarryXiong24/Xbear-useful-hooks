@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '@/assets/logo.svg';
 import routers from '@/router/index';
 import { Link, useRoutes } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 
 const App = () => {
   const [count, setCount] = useState(0);
