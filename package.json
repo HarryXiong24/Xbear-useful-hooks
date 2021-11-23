@@ -53,5 +53,29 @@
     "typescript": "^4.4.2",
     "vite": "^2.5.4",
     "vite-plugin-eslint": "^1.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "disableScopeLowerCase": false,
+      "disableSubjectLowerCase": false,
+      "maxHeaderWidth": 100,
+      "maxLineWidth": 100,
+      "defaultType": "",
+      "defaultScope": "",
+      "defaultSubject": "",
+      "defaultBody": "",
+      "defaultIssues": "",
+      "types": {
+        "feat": {
+          "description": "A new feature",
+          "title": "Features"
+        },
+        "cli": {
+          "description": "A new ci",
+          "title": "Ci"
+        }
+      }
+    }
   }
 }
