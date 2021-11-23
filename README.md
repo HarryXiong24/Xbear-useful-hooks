@@ -22,7 +22,23 @@ yarn install
 ## Run tests
 
 ```sh
-yarn run test
+yarn
+
+yarn dev
+```
+
+## Run build
+
+```sh
+yarn
+
+yarn build
+```
+
+## Run lint
+
+```sh
+yarn lint
 ```
 
 ## Author
