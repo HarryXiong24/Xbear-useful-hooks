@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import logo from '@/assets/logo.svg';
+import routers from '@/router/index';
+import { Link, useRoutes } from 'react-router-dom';
 import './App.css';
 
 const App = () => {
   const [count, setCount] = useState(0);
-
+  const Element = () => useRoutes(routers);
   return (
     <div className="App">
       <header className="App-header">
@@ -22,6 +24,14 @@ const App = () => {
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
         <p>
+          <Link to="/" className="App-link">
+            Home
+          </Link>
+          {' | '}
+          <Link to="/demo" className="App-link">
+            Demo
+          </Link>
+          {' | '}
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -40,6 +50,7 @@ const App = () => {
             Vite Docs
           </a>
         </p>
+        <Element />
       </header>
     </div>
   );
