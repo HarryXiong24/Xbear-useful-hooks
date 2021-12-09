@@ -20,5 +20,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["node_modules", "dist", "dist-ssr", "public"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "dist-ssr",
+    "public",
+    "scripts",
+    "templates"
+  ]
 }

@@ -13,7 +13,8 @@
     "test:cov": "jest --coverage",
     "commit": "cz",
     "log:all": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "log": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "new": "plop --plopfile ./scripts/plopfile.js"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -44,6 +45,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^27.1.0",
     "less": "^4.1.1",
+    "plop": "^3.0.4",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
     "stylelint": "^13.13.1",
