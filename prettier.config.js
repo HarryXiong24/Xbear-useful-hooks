@@ -11,6 +11,6 @@ module.exports = {
   bracketSameLine: false,
   arrowParens: 'always',
   htmlWhitespaceSensitivity: 'ignore',
-  vueIndentScriptAndStyle: true,
+  // vueIndentScriptAndStyle: true,
   endOfLine: 'crlf',
 };
