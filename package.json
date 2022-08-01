@@ -14,6 +14,7 @@
     "commit": "cz",
     "log:all": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "prepare": "husky install",
     "new": "plop --plopfile ./scripts/plopfile.js"
   },
   "dependencies": {
@@ -23,6 +24,8 @@
   },
   "devDependencies": {
     "@amatlash/vite-plugin-stylelint": "^1.1.1",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
@@ -43,8 +46,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^8.0.1",
     "jest": "^27.1.0",
     "less": "^4.1.1",
+    "lint-staged": "^13.0.3",
     "plop": "^3.0.4",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
@@ -63,6 +68,18 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint-staged"
     }
   }
 }
