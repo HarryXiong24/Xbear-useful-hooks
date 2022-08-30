@@ -1,15 +1,17 @@
 import React from 'react';
-import { RouteObject } from 'react-router';
-import Home from '@/pages/Home/index';
+import { routeMap } from '@/common/menus';
 import NoMatch from '@/pages/404/index';
-// import Demo from '@/pages/Demo/index';
+import { Route, Routes } from 'react-router-dom';
 
-const Demo = React.lazy(() => import('@/pages/Demo/index'));
+export const Router = () => {
+  return (
+    <Routes>
+      {routeMap.map((router, index) => (
+        <Route key={`${router.path!}${index}`} {...router} />
+      ))}
+      <Route path="*" element={<NoMatch />} />
+    </Routes>
+  );
+};
 
-const routes: RouteObject[] = [
-  { path: '/', element: <Home />, index: true },
-  { path: '/demo', element: <Demo /> },
-  { path: '*', element: <NoMatch /> },
-];
-
-export default routes;
+export default Router;

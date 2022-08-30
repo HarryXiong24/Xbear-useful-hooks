@@ -12,5 +12,5 @@ module.exports = {
   arrowParens: 'always',
   htmlWhitespaceSensitivity: 'ignore',
   // vueIndentScriptAndStyle: true,
-  endOfLine: 'crlf',
+  endOfLine: 'lf',
 };

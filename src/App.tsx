@@ -1,58 +1,40 @@
-import React, { useState } from 'react';
-import logo from '@/assets/logo.svg';
-import routers from '@/router/index';
-import { Link, useRoutes } from 'react-router-dom';
+import React from 'react';
+import { Layout } from '@douyinfe/semi-ui';
 import './App.scss';
+import { Route, Routes } from 'react-router-dom';
+import { Router } from '@/router';
+import AppSider from './components/Sider';
+import AppFooter from './components/Footer';
+import AppHeader from './components/Header';
+import Home from './pages/Home';
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const Element = () => useRoutes(routers);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button
-            type="button"
-            onClick={() => setCount((number) => number + 1)}
-          >
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <Link to="/" className="App-link">
-            Home
-          </Link>
-          {' | '}
-          <Link to="/demo" className="App-link">
-            Demo
-          </Link>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-        <Element />
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/*" element={<Guide />} />
+    </Routes>
+  );
+};
+
+const Guide = () => {
+  const { Content } = Layout;
+  return (
+    <Layout className="App">
+      <AppHeader />
+      <Layout>
+        <AppSider />
+        <Content
+          style={{
+            padding: '24px',
+            backgroundColor: 'var(--semi-color-bg-0)',
+          }}
+        >
+          <Router />
+        </Content>
+      </Layout>
+      <AppFooter />
+    </Layout>
   );
 };
 
