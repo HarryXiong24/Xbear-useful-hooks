@@ -8,31 +8,31 @@ import AppFooter from './components/Footer';
 import AppHeader from './components/Header';
 import Home from './pages/Home';
 
-const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/*" element={<Guide />} />
-    </Routes>
-  );
-};
-
 const Guide = () => {
   const { Content } = Layout;
   return (
+    <Layout>
+      <AppSider />
+      <Content
+        style={{
+          padding: '24px',
+          backgroundColor: 'var(--semi-color-bg-0)',
+        }}
+      >
+        <Router />
+      </Content>
+    </Layout>
+  );
+};
+
+export const App = () => {
+  return (
     <Layout className="App">
       <AppHeader />
-      <Layout>
-        <AppSider />
-        <Content
-          style={{
-            padding: '24px',
-            backgroundColor: 'var(--semi-color-bg-0)',
-          }}
-        >
-          <Router />
-        </Content>
-      </Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/*" element={<Guide />} />
+      </Routes>
       <AppFooter />
     </Layout>
   );

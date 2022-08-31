@@ -5,32 +5,32 @@ import React from 'react';
 
 export const menus = [
   {
-    itemKey: '/Main',
-    text: '首页',
+    itemKey: '/state',
+    text: 'State',
     items: [
       {
         text: 'Home',
-        itemKey: '/home',
+        itemKey: '/state/home',
         element: <Home />,
       },
       {
         text: 'Demo',
-        itemKey: '/demo',
+        itemKey: '/state/demo',
         element: <Demo />,
       },
     ],
   },
   {
-    itemKey: '/Histogram',
-    text: '基础数据',
+    itemKey: '/effect',
+    text: 'Effect',
   },
   {
-    itemKey: '/Live',
-    text: '测试功能',
+    itemKey: '/lifeCycle',
+    text: 'LifeCycle',
   },
   {
-    itemKey: '/Setting',
-    text: '设置',
+    itemKey: '/dom',
+    text: 'Dom',
   },
 ];
 

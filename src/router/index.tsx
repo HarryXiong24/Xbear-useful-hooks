@@ -1,7 +1,6 @@
 import React from 'react';
 import { routeMap } from '@/common/menus';
-import NoMatch from '@/pages/404/index';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 export const Router = () => {
   return (
@@ -9,7 +8,7 @@ export const Router = () => {
       {routeMap.map((router, index) => (
         <Route key={`${router.path!}${index}`} {...router} />
       ))}
-      <Route path="*" element={<NoMatch />} />
+      <Route path="*" element={<Navigate to="/state/home" />} />
     </Routes>
   );
 };
