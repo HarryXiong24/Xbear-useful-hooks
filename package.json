@@ -15,7 +15,7 @@
     "log:all": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "prepare": "husky install",
-    "new": "plop --plopfile ./scripts/plopfile.js"
+    "newfile": "plop --plopfile ./scripts/plopfile.js"
   },
   "dependencies": {
     "@douyinfe/semi-ui": "^2.18.2",

@@ -2,25 +2,47 @@
 const path = require('path');
 
 module.exports = (plop) => {
-  plop.setGenerator('demo', {
-    description: 'create new files',
+  plop.setGenerator('hook', {
+    description: 'create new hooks',
     prompts: [
       {
         type: 'input',
         name: 'name',
-        message: 'demo name please',
+        message: 'hook name please',
       },
     ],
     actions: [
       {
         type: 'add',
-        path: path.resolve(__dirname, '../src/plop_demo/{{name}}.ts'),
-        templateFile: path.resolve(__dirname, '../templates/demo.hbs'),
-        data: {
-          a: 1,
-          b: 2,
-          c: 3,
-        },
+        path: path.resolve(__dirname, '../packages/hooks/{{name}}/index.ts'),
+        templateFile: path.resolve(
+          __dirname,
+          '../templates/hook-template/index.hbs'
+        ),
+        // data: {
+        //   a: 1,
+        //   b: 2,
+        //   c: 3,
+        // },
+      },
+      {
+        type: 'add',
+        path: path.resolve(__dirname, '../packages/hooks/{{name}}/doc.md'),
+        templateFile: path.resolve(
+          __dirname,
+          '../templates/hook-template/doc.hbs'
+        ),
+      },
+      {
+        type: 'add',
+        path: path.resolve(
+          __dirname,
+          '../src/pages/{{pascalCase name}}Page/index.tsx'
+        ),
+        templateFile: path.resolve(
+          __dirname,
+          '../templates/page-template/index.hbs'
+        ),
       },
     ],
   });
