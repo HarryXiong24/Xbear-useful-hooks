@@ -1,7 +1,7 @@
+import React from 'react';
 import { RouteObject } from 'react-router';
 import Home from '@/pages/Home';
-import Demo from '@/pages/Demo';
-import React from 'react';
+import UseSetStatePage from '@/pages/UseSetStatePage';
 
 export const menus = [
   {
@@ -9,14 +9,14 @@ export const menus = [
     text: 'State',
     items: [
       {
-        text: 'Home',
-        itemKey: '/state/home',
-        element: <Home />,
+        text: 'useSetState',
+        itemKey: '/state/useSetState',
+        element: <UseSetStatePage />,
       },
       {
         text: 'Demo',
         itemKey: '/state/demo',
-        element: <Demo />,
+        element: <Home />,
       },
     ],
   },

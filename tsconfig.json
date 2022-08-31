@@ -17,9 +17,11 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "xbear-hooks/*": ["./packages/*"]
     }
   },
+  "include": ["src", "packages"],
   "exclude": [
     "node_modules",
     "dist",

@@ -3,6 +3,7 @@ import path from 'path';
 import eslintPlugin from 'vite-plugin-eslint';
 import viteStylelint from '@amatlash/vite-plugin-stylelint';
 import reactRefresh from '@vitejs/plugin-react-refresh';
+import MDPlugin from './plugins/vite-plugin-md';
 
 function resolve(relativePath: string) {
   return path.resolve(__dirname, relativePath);
@@ -15,6 +16,7 @@ export default defineConfig({
   // 部署的前缀
   base,
   plugins: [
+    MDPlugin(),
     reactRefresh(),
     eslintPlugin({
       fix: true,
@@ -37,6 +39,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve('./src'),
+      'xbear-hooks': resolve('./packages'),
     },
   },
 });
