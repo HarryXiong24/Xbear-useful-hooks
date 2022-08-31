@@ -1,11 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Layout, Nav, Button } from '@douyinfe/semi-ui';
-import {
-  IconSemiLogo,
-  IconGithubLogo,
-  IconHelpCircle,
-} from '@douyinfe/semi-icons';
+import { IconSemiLogo, IconGithubLogo } from '@douyinfe/semi-icons';
 
 export const AppHeader = () => {
   const navigate = useNavigate();
@@ -25,7 +21,7 @@ export const AppHeader = () => {
             text: '首页',
           },
           {
-            itemKey: '/state/home',
+            itemKey: '/state',
             text: 'API',
           },
         ]}
@@ -46,13 +42,10 @@ export const AppHeader = () => {
                 color: 'var(--semi-color-text-2)',
                 marginRight: '12px',
               }}
-            />
-            <Button
-              theme="borderless"
-              icon={<IconHelpCircle size="large" />}
-              style={{
-                color: 'var(--semi-color-text-2)',
-                marginRight: '12px',
+              onClick={() => {
+                window.open(
+                  'https://github.com/HarryXiong24/Xbear-useful-hooks'
+                );
               }}
             />
           </>

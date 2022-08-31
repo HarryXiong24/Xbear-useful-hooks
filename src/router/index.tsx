@@ -8,7 +8,7 @@ export const Router = () => {
       {routeMap.map((router, index) => (
         <Route key={`${router.path!}${index}`} {...router} />
       ))}
-      <Route path="*" element={<Navigate to="/state/home" />} />
+      <Route path="*" element={<Navigate to="/state/useSetState" />} />
     </Routes>
   );
 };
