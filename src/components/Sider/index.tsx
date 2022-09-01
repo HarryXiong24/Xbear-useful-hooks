@@ -11,7 +11,7 @@ export const AppSider = () => {
       <Nav
         key="sider"
         style={{ maxWidth: 220, height: '100%' }}
-        defaultSelectedKeys={['/state/home']}
+        defaultSelectedKeys={[`${window.location.pathname}`]}
         items={menus}
         onClick={({ itemKey }) => {
           if (itemKey && itemKey && /(\/.*){2,}/.test(`${itemKey}`)) {

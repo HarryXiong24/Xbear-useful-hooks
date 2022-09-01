@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteObject } from 'react-router';
-import Home from '@/pages/Home';
 import UseSetStatePage from '@/pages/UseSetStatePage';
+import UseBooleanPage from '@/pages/UseBooleanPage';
 
 export const menus = [
   {
@@ -14,9 +14,9 @@ export const menus = [
         element: <UseSetStatePage />,
       },
       {
-        text: 'Demo',
-        itemKey: '/state/demo',
-        element: <Home />,
+        text: 'useBoolean',
+        itemKey: '/state/useBoolean',
+        element: <UseBooleanPage />,
       },
     ],
   },

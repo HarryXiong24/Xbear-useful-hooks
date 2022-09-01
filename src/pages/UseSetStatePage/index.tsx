@@ -19,33 +19,31 @@ const Demo = () => {
   });
 
   return (
-    <Card>
-      <div>
-        <pre>{JSON.stringify(state, null, 2)}</pre>
-        <p>
-          <button type="button" onClick={() => setState({ hello: 'world' })}>
-            set hello
-          </button>
-          <button
-            type="button"
-            onClick={() => setState({ foo: 'bar' })}
-            style={{ margin: '0 8px' }}
-          >
-            set foo
-          </button>
-          <button
-            type="button"
-            onClick={() =>
-              setState((prev: { count: number }) => ({
-                count: prev.count + 1,
-              }))
-            }
-          >
-            count + 1
-          </button>
-        </p>
-      </div>
-    </Card>
+    <div>
+      <pre>{JSON.stringify(state, null, 2)}</pre>
+      <p>
+        <button type="button" onClick={() => setState({ hello: 'world' })}>
+          set hello
+        </button>
+        <button
+          type="button"
+          onClick={() => setState({ foo: 'bar' })}
+          style={{ margin: '0 8px' }}
+        >
+          set foo
+        </button>
+        <button
+          type="button"
+          onClick={() =>
+            setState((prev: { count: number }) => ({
+              count: prev.count + 1,
+            }))
+          }
+        >
+          count + 1
+        </button>
+      </p>
+    </div>
   );
 };
 
@@ -59,7 +57,9 @@ const UseSetStatePage = () => {
           // eslint-disable-next-line react/no-children-prop
           children={doc}
         />
-        <Demo />
+        <Card>
+          <Demo />
+        </Card>
       </Card>
     </>
   );
