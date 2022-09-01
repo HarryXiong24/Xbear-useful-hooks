@@ -4,6 +4,7 @@ import UseSetStatePage from '@/pages/UseSetStatePage';
 import UseBooleanPage from '@/pages/UseBooleanPage';
 import UseLocalStoragePage from '@/pages/UseLocalStoragePage';
 import UseMountPage from '@/pages/UseMountPage';
+import UseUpdateEffectPage from '@/pages/UseUpdateEffectPage';
 
 export const menus = [
   {
@@ -28,17 +29,6 @@ export const menus = [
     ],
   },
   {
-    itemKey: '/effect',
-    text: 'Effect',
-    items: [
-      // {
-      //   text: 'useMount',
-      //   itemKey: '/state/useMount',
-      //   element: <UseMountPage />,
-      // },
-    ],
-  },
-  {
     itemKey: '/lifeCycle',
     text: 'LifeCycle',
     items: [
@@ -47,6 +37,22 @@ export const menus = [
         itemKey: '/state/useMount',
         element: <UseMountPage />,
       },
+      {
+        text: 'useUpdateEffect',
+        itemKey: '/state/useUpdateEffect',
+        element: <UseUpdateEffectPage />,
+      },
+    ],
+  },
+  {
+    itemKey: '/effect',
+    text: 'Effect',
+    items: [
+      // {
+      //   text: 'useMount',
+      //   itemKey: '/state/useMount',
+      //   element: <UseMountPage />,
+      // },
     ],
   },
   {
