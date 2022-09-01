@@ -1,6 +1,8 @@
 
 ## useBoolean
 
+优雅的管理 boolean 状态的 Hook。
+
 ### API
 
 ``` typescript

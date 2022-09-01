@@ -1,16 +1,16 @@
 import React from 'react';
-import { {{name}} } from 'xbear-hooks/hooks';
+import { useLocalStorage } from 'xbear-hooks/hooks';
 import { Card } from '@douyinfe/semi-ui';
-import doc from 'xbear-hooks/hooks/{{name}}/doc.md';
+import doc from 'xbear-hooks/hooks/useLocalStorage/doc.md';
 import ReactMarkDown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
 
 const Demo = () => {
-  return null
+  return null;
 };
 
-const {{pascalCase name}}Page = () => {
+const UseLocalStoragePage = () => {
   return (
     <>
       <Card>
@@ -28,4 +28,4 @@ const {{pascalCase name}}Page = () => {
   );
 };
 
-export default {{pascalCase name}}Page;
+export default UseLocalStoragePage;

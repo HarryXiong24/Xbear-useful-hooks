@@ -7,7 +7,7 @@ export interface Actions {
   toggle: () => void;
 }
 
-const useBoolean = (
+export const useBoolean = (
   defaultValue = false
 ): [state: boolean, actions: Actions] => {
   const [state, setState] = useState(defaultValue);
