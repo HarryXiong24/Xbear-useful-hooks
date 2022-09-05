@@ -5,6 +5,7 @@ import useMount from './useMount';
 import useUpdateEffect from './useUpdateEffect';
 import useUpdateLayoutEffect from './useUpdateLayoutEffect';
 import useUnmount from './useUnmount';
+import useIsUnmountedRef from './useIsUnmountedRef';
 
 export {
   useSetState,
@@ -14,4 +15,5 @@ export {
   useUpdateEffect,
   useUpdateLayoutEffect,
   useUnmount,
+  useIsUnmountedRef,
 };

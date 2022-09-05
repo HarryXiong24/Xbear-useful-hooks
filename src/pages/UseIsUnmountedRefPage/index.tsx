@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useBoolean, useMount, useUnmount } from 'xbear-hooks/hooks';
+import {
+  useBoolean,
+  useMount,
+  useUnmount,
+  useIsUnmountedRef,
+} from 'xbear-hooks/hooks';
 import { Card, Toast } from '@douyinfe/semi-ui';
 import doc from 'xbear-hooks/hooks/useUnmount/doc.md';
 import ReactMarkDown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
 
-const UseUnmountComponent = (props: {
+const UseIsUnmountedRefComponent = (props: {
   count: number;
   effectInfo: string;
   mountInfo: string;
@@ -14,8 +19,10 @@ const UseUnmountComponent = (props: {
   setEffectInfo: (value: string) => void;
 }) => {
   const { count, effectInfo, mountInfo, setMountInfo, setEffectInfo } = props;
+  const isUnmountedRef = useIsUnmountedRef();
 
   useMount(() => {
+    Toast.info(`mount! isUnmountedRef = ${String(isUnmountedRef.current)}`);
     setMountInfo(`When count ${count}, mounted!`);
   });
 
@@ -24,7 +31,7 @@ const UseUnmountComponent = (props: {
   }, [count, setEffectInfo]);
 
   useUnmount(() => {
-    Toast.info('unmount');
+    Toast.info(`unmount isUnmountedRef = ${String(isUnmountedRef.current)}`);
   });
 
   return (
@@ -60,7 +67,7 @@ const Demo = () => {
   return (
     <div>
       {state && (
-        <UseUnmountComponent
+        <UseIsUnmountedRefComponent
           mountInfo={mountInfo}
           effectInfo={effectInfo}
           count={count}
@@ -80,8 +87,7 @@ const Demo = () => {
     </div>
   );
 };
-
-const UseUnmountPage = () => {
+const UseIsUnmountedRefPage = () => {
   return (
     <>
       <Card>
@@ -99,4 +105,4 @@ const UseUnmountPage = () => {
   );
 };
 
-export default UseUnmountPage;
+export default UseIsUnmountedRefPage;

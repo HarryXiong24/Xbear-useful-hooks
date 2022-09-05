@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
-import useLatest from '../useLatest';
+import { useEffect, useRef } from 'react';
 import { isFunction } from '../utils';
 
 const useUnmount = (fn: () => void) => {
+  const ref = useRef(fn);
+
   if (process.env.NODE_ENV === 'development') {
     if (!isFunction(fn)) {
       console.error(
@@ -11,11 +12,12 @@ const useUnmount = (fn: () => void) => {
     }
   }
 
-  const fnRef = useLatest(fn);
+  ref.current = fn;
 
   useEffect(() => {
+    // 卸载钩子
     return () => {
-      fnRef.current();
+      ref.current();
     };
   }, []);
 };

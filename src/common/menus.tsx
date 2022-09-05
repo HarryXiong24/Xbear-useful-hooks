@@ -7,6 +7,7 @@ import UseMountPage from '@/pages/UseMountPage';
 import UseUpdateEffectPage from '@/pages/UseUpdateEffectPage';
 import UseUpdateLayoutEffectPage from '@/pages/UseUpdateLayoutEffectPage';
 import UseUnmountPage from '@/pages/UseUnmountPage';
+import UseIsUnmountedRefPage from '@/pages/UseIsUnmountedRefPage';
 
 export const menus = [
   {
@@ -53,6 +54,11 @@ export const menus = [
         text: 'useUnmount',
         itemKey: '/state/useUnmount',
         element: <UseUnmountPage />,
+      },
+      {
+        text: 'useIsUnmount',
+        itemKey: '/state/useIsUnmount',
+        element: <UseIsUnmountedRefPage />,
       },
     ],
   },
