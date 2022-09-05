@@ -56,8 +56,8 @@ export const menus = [
         element: <UseUnmountPage />,
       },
       {
-        text: 'useIsUnmount',
-        itemKey: '/state/useIsUnmount',
+        text: 'useIsUnmountRef',
+        itemKey: '/state/useIsUnmountRef',
         element: <UseIsUnmountedRefPage />,
       },
     ],

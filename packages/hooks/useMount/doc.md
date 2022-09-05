@@ -14,6 +14,7 @@ useMount(fn: () => void);
 ``` typescript
 import React, { useEffect, useState } from 'react';
 import { useMount } from 'xbear-hooks/hooks';
+import { Toast } from '@douyinfe/semi-ui';
 
 const Demo = () => {
   const [mountInfo, setMountInfo] = useState('');

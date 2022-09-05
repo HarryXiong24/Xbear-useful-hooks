@@ -6,7 +6,7 @@ import {
   useIsUnmountedRef,
 } from 'xbear-hooks/hooks';
 import { Card, Toast } from '@douyinfe/semi-ui';
-import doc from 'xbear-hooks/hooks/useUnmount/doc.md';
+import doc from 'xbear-hooks/hooks/useIsUnmountedRef/doc.md';
 import ReactMarkDown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
@@ -87,6 +87,7 @@ const Demo = () => {
     </div>
   );
 };
+
 const UseIsUnmountedRefPage = () => {
   return (
     <>
