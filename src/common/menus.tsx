@@ -5,6 +5,7 @@ import UseBooleanPage from '@/pages/UseBooleanPage';
 import UseLocalStoragePage from '@/pages/UseLocalStoragePage';
 import UseMountPage from '@/pages/UseMountPage';
 import UseUpdateEffectPage from '@/pages/UseUpdateEffectPage';
+import UseUpdateLayoutEffectPage from '@/pages/UseUpdateLayoutEffectPage';
 
 export const menus = [
   {
@@ -41,6 +42,11 @@ export const menus = [
         text: 'useUpdateEffect',
         itemKey: '/state/useUpdateEffect',
         element: <UseUpdateEffectPage />,
+      },
+      {
+        text: 'useUpdateLayoutEffect',
+        itemKey: '/state/useUpdateLayoutEffect',
+        element: <UseUpdateLayoutEffectPage />,
       },
     ],
   },

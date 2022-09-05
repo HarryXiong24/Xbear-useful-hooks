@@ -10,7 +10,7 @@ export const AppSider = () => {
     <Sider style={{ backgroundColor: 'var(--semi-color-bg-1)' }}>
       <Nav
         key="sider"
-        style={{ maxWidth: 220, height: '100%' }}
+        style={{ maxWidth: 300, height: '100%' }}
         defaultSelectedKeys={[`${window.location.pathname}`]}
         items={menus}
         onClick={({ itemKey }) => {
