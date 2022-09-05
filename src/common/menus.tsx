@@ -6,6 +6,7 @@ import UseLocalStoragePage from '@/pages/UseLocalStoragePage';
 import UseMountPage from '@/pages/UseMountPage';
 import UseUpdateEffectPage from '@/pages/UseUpdateEffectPage';
 import UseUpdateLayoutEffectPage from '@/pages/UseUpdateLayoutEffectPage';
+import UseUnmountPage from '@/pages/UseUnmountPage';
 
 export const menus = [
   {
@@ -47,6 +48,11 @@ export const menus = [
         text: 'useUpdateLayoutEffect',
         itemKey: '/state/useUpdateLayoutEffect',
         element: <UseUpdateLayoutEffectPage />,
+      },
+      {
+        text: 'useUnmount',
+        itemKey: '/state/useUnmount',
+        element: <UseUnmountPage />,
       },
     ],
   },

@@ -4,6 +4,7 @@ import useLocalStorage from './useLocalStorage';
 import useMount from './useMount';
 import useUpdateEffect from './useUpdateEffect';
 import useUpdateLayoutEffect from './useUpdateLayoutEffect';
+import useUnmount from './useUnmount';
 
 export {
   useSetState,
@@ -12,4 +13,5 @@ export {
   useMount,
   useUpdateEffect,
   useUpdateLayoutEffect,
+  useUnmount,
 };
