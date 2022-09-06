@@ -57,13 +57,6 @@ const Demo = () => {
     setEffectInfo(`When count ${count}, updated!`);
   }, [count]);
 
-  // 组件销毁的时候调用
-  useUnmount(() => {
-    return () => {
-      Toast.info('unmount');
-    };
-  });
-
   return (
     <div>
       {state && (

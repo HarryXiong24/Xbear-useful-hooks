@@ -21,11 +21,16 @@ const UseUnmountComponent = (props: {
 
   useEffect(() => {
     setEffectInfo(`When count ${count}, updated!`);
+    return () => {
+      Toast.info('unmount1111');
+    };
   }, [count, setEffectInfo]);
 
-  useUnmount(() => {
-    Toast.info('unmount');
-  });
+  useEffect(() => {
+    return () => {
+      Toast.info('unmount');
+    };
+  }, []);
 
   return (
     <div key={count}>
@@ -49,13 +54,6 @@ const Demo = () => {
   useEffect(() => {
     setEffectInfo(`When count ${count}, updated!`);
   }, [count]);
-
-  // 组件销毁的时候调用
-  useUnmount(() => {
-    return () => {
-      Toast.info('unmount');
-    };
-  });
 
   return (
     <div>
