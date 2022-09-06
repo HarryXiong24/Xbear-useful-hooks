@@ -21,16 +21,11 @@ const UseUnmountComponent = (props: {
 
   useEffect(() => {
     setEffectInfo(`When count ${count}, updated!`);
-    return () => {
-      Toast.info('unmount1111');
-    };
   }, [count, setEffectInfo]);
 
-  useEffect(() => {
-    return () => {
-      Toast.info('unmount');
-    };
-  }, []);
+  useUnmount(() => {
+    Toast.info('unmount');
+  });
 
   return (
     <div key={count}>

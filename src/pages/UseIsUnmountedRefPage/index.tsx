@@ -28,6 +28,9 @@ const UseIsUnmountedRefComponent = (props: {
 
   useEffect(() => {
     setEffectInfo(`When count ${count}, updated!`);
+    return () => {
+      Toast.info(`isUnmountedRef = ${String(isUnmountedRef.current)}`);
+    };
   }, [count, setEffectInfo]);
 
   useUnmount(() => {
